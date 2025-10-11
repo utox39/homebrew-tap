@@ -12,7 +12,7 @@ class Zigfetch < Formula
   end
 
   def install
-    system "zig", "build", *std_zig_args(:safe)
+    system "zig", "build", *std_zig_args(release_mode: :safe)
   end
 
   test do
