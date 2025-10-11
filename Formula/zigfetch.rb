@@ -16,6 +16,6 @@ class Zigfetch < Formula
   end
 
   test do
-    system "true"
+    assert_path_exists bin/"zigfetch"
   end
 end
