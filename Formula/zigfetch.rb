@@ -12,8 +12,7 @@ class Zigfetch < Formula
   end
 
   def install
-    release_mode = :safe
-    system "zig", "build", *std_zig_args
+    system "zig", "build", *std_zig_args(:safe)
   end
 
   test do
