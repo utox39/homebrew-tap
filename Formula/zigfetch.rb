@@ -1,8 +1,8 @@
 class Zigfetch < Formula
   desc "Minimal neofetch/fastfetch like system information tool"
   homepage "https://github.com/utox39/zigfetch"
-  url "https://github.com/utox39/zigfetch/archive/refs/tags/v0.24.0.tar.gz"
-  sha256 "32df75a27188c626602610550bb945a3d2a09e9025b116dec213500ab779c109"
+  url "https://github.com/utox39/zigfetch/archive/refs/tags/v0.24.2.tar.gz"
+  sha256 "adc3db4b8a4e59cd098a49dd61d7cf56d77d70497cc7ad4d350b0fd119b41c9e"
   license "MIT"
 
   depends_on "zig" => :build
