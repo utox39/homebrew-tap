@@ -12,7 +12,14 @@ class Zigfetch < Formula
   end
 
   def install
-    system "zig", "build", *std_zig_args(release_mode: :safe)
+    args = std_zig_args(release_mode: :safe)
+
+    if ENV["ZIGFETCH_ENABLE_RPM"]
+      odie "ZIGFETCH_ENABLE_RPM is only supported on Linux" unless OS.linux?
+      args << "-Denable-rpm"
+    end
+
+    system "zig", "build", *args
   end
 
   test do
